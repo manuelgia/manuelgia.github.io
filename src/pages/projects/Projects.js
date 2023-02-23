@@ -15,6 +15,8 @@ import {
 import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
 import ProjectsImg from "./ProjectsImg";
+import ProjectList from "../../components/github/proyectos";
+import ProjectDetail from "../../components/github/descripcion";
 
 class Projects extends Component {
   render() {
@@ -50,9 +52,23 @@ class Projects extends Component {
           </Fade>
         </div>
         <div className="repo-cards-div-main">
-          {ProjectsData.data.map((repo) => {
-            return <GithubRepoCard repo={repo} theme={theme} />;
-          })}
+          <ProjectDetail
+            username="manuelgia"
+            repoName="calculator"
+          ></ProjectDetail>
+          <ProjectDetail username="manuelgia" repoName="puzzle"></ProjectDetail>
+          <ProjectDetail
+            username="manuelgia"
+            repoName="chatgpt-discord-bot-python"
+          ></ProjectDetail>
+          <ProjectDetail
+            username="manuelgia"
+            repoName="click-counter"
+          ></ProjectDetail>
+          <ProjectDetail
+            username="manuelgia"
+            repoName="toDoList"
+          ></ProjectDetail>
         </div>
         <Button
           text={"More Projects"}
@@ -63,34 +79,6 @@ class Projects extends Component {
         />
 
         {/* Publications  */}
-        {publications.data.length > 0 ? (
-          <div className="basic-projects">
-            <Fade bottom duration={2000} distance="40px">
-              <div className="publications-heading-div">
-                <div className="publications-heading-text-div">
-                  <h1
-                    className="publications-heading-text"
-                    style={{ color: theme.text }}
-                  >
-                    {publicationsHeader.title}
-                  </h1>
-                  <p
-                    className="projects-header-detail-text subTitle"
-                    style={{ color: theme.secondaryText }}
-                  >
-                    {publicationsHeader["description"]}
-                  </p>
-                </div>
-              </div>
-            </Fade>
-          </div>
-        ) : null}
-
-        <div className="repo-cards-div-main">
-          {publications.data.map((pub) => {
-            return <PublicationCard pub={pub} theme={theme} />;
-          })}
-        </div>
 
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />

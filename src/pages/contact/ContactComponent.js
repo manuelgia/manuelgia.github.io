@@ -9,6 +9,7 @@ import AddressImg from "./AddressImg";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../portfolio.js";
+import img from "../../assests/images/asddd.png";
 
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;
@@ -69,7 +70,7 @@ class Contact extends Component {
                 </p>
                 <div className="blogsite-btn-div">
                   <Button
-                    text="Visit My Blogsite"
+                    text="Visit my profile"
                     newTab={true}
                     href={blogSection.link}
                     theme={theme}
@@ -121,9 +122,9 @@ class Contact extends Component {
                 </p>
                 <div className="address-btn-div">
                   <Button
-                    text="Visit on Google Maps"
+                    text="Send me an e-mail"
                     newTab={true}
-                    href={addressSection.location_map_link}
+                    href="mailto:000326446@adexperu.edu.pe"
                     theme={theme}
                   />
                 </div>

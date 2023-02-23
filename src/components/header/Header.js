@@ -4,6 +4,8 @@ import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
+import { Nav } from "reactstrap";
+import Lista from "../languages/dropdown";
 
 const onMouseEnter = (event, color) => {
   const el = event.target;
@@ -18,7 +20,9 @@ const onMouseOut = (event) => {
 class Header extends Component {
   render() {
     const theme = this.props.theme;
+
     const link = settings.isSplash ? "/splash" : "home";
+
     return (
       <Fade top duration={1000} distance="20px">
         <SeoHeader />
@@ -36,6 +40,9 @@ class Header extends Component {
               <span className="navicon"></span>
             </label>
             <ul className="menu" style={{ backgroundColor: theme.body }}>
+              {/*<li>
+                <Lista></Lista>
+              </li>*/}
               <li>
                 <NavLink
                   to="/home"
@@ -48,6 +55,7 @@ class Header extends Component {
                   Home
                 </NavLink>
               </li>
+
               <li>
                 <NavLink
                   to="/education"
@@ -60,7 +68,7 @@ class Header extends Component {
                   Education
                 </NavLink>
               </li>
-              <li>
+              {/*<li>
                 <NavLink
                   to="/experience"
                   tag={Link}
@@ -71,7 +79,7 @@ class Header extends Component {
                 >
                   Experience
                 </NavLink>
-              </li>
+              </li>*/}
               <li>
                 <NavLink
                   to="/projects"
@@ -84,7 +92,7 @@ class Header extends Component {
                   Projects
                 </NavLink>
               </li>
-              <li>
+              {/*<li>
                 <NavLink
                   to="/opensource"
                   tag={Link}
@@ -95,7 +103,7 @@ class Header extends Component {
                 >
                   Open Source
                 </NavLink>
-              </li>
+              </li>*/}
               <li>
                 <NavLink
                   to="/contact"

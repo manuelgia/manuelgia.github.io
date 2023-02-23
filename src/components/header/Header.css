@@ -49,6 +49,7 @@
 
 .menu {
   font-family: "Google Sans Regular";
+  overflow: visible;
 }
 
 .header .menu {
@@ -136,6 +137,7 @@
   }
   .header .menu {
     max-height: none;
+    overflow: visible;
   }
   .header .menu-icon {
     display: none;
